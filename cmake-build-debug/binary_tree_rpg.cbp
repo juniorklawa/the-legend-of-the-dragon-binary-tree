@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="binary_tree_rpg"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="binary_tree_rpg">
+				<Option output="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/binary_tree_rpg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 binary_tree_rpg"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="binary_tree_rpg/fast">
+				<Option output="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/binary_tree_rpg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 binary_tree_rpg/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/main.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/minheap.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/minheap.h">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/tree.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/tree.h">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

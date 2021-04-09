@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/binary_tree_rpg.dir/main.c.o CMakeFiles/binary_tree_rpg.dir/tree.c.o CMakeFiles/binary_tree_rpg.dir/minheap.c.o -o binary_tree_rpg 

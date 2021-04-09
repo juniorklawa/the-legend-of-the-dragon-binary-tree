@@ -1,0 +1,4 @@
+/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/everaldo/Projects/binary_tree_rpg
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/everaldo/Projects/binary_tree_rpg/cmake-build-debug
