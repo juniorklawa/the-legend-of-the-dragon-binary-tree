@@ -3,9 +3,6 @@
 
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../main.c
 
-CMakeFiles/binary_tree_rpg.dir/minheap.c.o: ../minheap.c
-CMakeFiles/binary_tree_rpg.dir/minheap.c.o: ../minheap.h
-
 CMakeFiles/binary_tree_rpg.dir/tree.c.o: ../tree.c
 CMakeFiles/binary_tree_rpg.dir/tree.c.o: ../tree.h
 

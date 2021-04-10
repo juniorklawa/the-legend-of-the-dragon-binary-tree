@@ -169,33 +169,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/main.c.s
 .PHONY : main.c.s
 
-minheap.o: minheap.c.o
-
-.PHONY : minheap.o
-
-# target to build an object file
-minheap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/minheap.c.o
-.PHONY : minheap.c.o
-
-minheap.i: minheap.c.i
-
-.PHONY : minheap.i
-
-# target to preprocess a source file
-minheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/minheap.c.i
-.PHONY : minheap.c.i
-
-minheap.s: minheap.c.s
-
-.PHONY : minheap.s
-
-# target to generate assembly for a file
-minheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/minheap.c.s
-.PHONY : minheap.c.s
-
 tree.o: tree.c.o
 
 .PHONY : tree.o
@@ -235,9 +208,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... minheap.o"
-	@echo "... minheap.i"
-	@echo "... minheap.s"
 	@echo "... tree.o"
 	@echo "... tree.i"
 	@echo "... tree.s"

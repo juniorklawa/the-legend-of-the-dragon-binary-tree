@@ -82,7 +82,6 @@ void print_story (struct  Node *n, struct RPGGame *game){
                 puts(n->nextNodeAsciiArt);
                 print_story(n->left,game);
             }
-
         }
 
         if(n->key == 8 || n->key == 12) {
@@ -270,8 +269,7 @@ int main() {
 
 
 
-
-
+//comentario
 
 
 

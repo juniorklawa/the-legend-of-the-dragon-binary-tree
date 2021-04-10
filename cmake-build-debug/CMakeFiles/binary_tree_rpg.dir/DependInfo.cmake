@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/everaldo/Projects/binary_tree_rpg/main.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/main.c.o"
-  "/home/everaldo/Projects/binary_tree_rpg/minheap.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/minheap.c.o"
   "/home/everaldo/Projects/binary_tree_rpg/tree.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/tree.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
