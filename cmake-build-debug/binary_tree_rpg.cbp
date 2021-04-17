@@ -76,13 +76,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_base.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_base.h">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_classes.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_classes.h">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_story.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
 		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/main.c">
-			<Option target="binary_tree_rpg"/>
-		</Unit>
-		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/tree.c">
-			<Option target="binary_tree_rpg"/>
-		</Unit>
-		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/tree.h">
 			<Option target="binary_tree_rpg"/>
 		</Unit>
 		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/CMakeLists.txt">

@@ -89,32 +89,77 @@ CMakeFiles/binary_tree_rpg.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/main.c -o CMakeFiles/binary_tree_rpg.dir/main.c.s
 
-CMakeFiles/binary_tree_rpg.dir/tree.c.o: CMakeFiles/binary_tree_rpg.dir/flags.make
-CMakeFiles/binary_tree_rpg.dir/tree.c.o: ../tree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/binary_tree_rpg.dir/tree.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/binary_tree_rpg.dir/tree.c.o -c /home/everaldo/Projects/binary_tree_rpg/tree.c
+CMakeFiles/binary_tree_rpg.dir/game_base.c.o: CMakeFiles/binary_tree_rpg.dir/flags.make
+CMakeFiles/binary_tree_rpg.dir/game_base.c.o: ../game_base.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/binary_tree_rpg.dir/game_base.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/binary_tree_rpg.dir/game_base.c.o -c /home/everaldo/Projects/binary_tree_rpg/game_base.c
 
-CMakeFiles/binary_tree_rpg.dir/tree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/binary_tree_rpg.dir/tree.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/everaldo/Projects/binary_tree_rpg/tree.c > CMakeFiles/binary_tree_rpg.dir/tree.c.i
+CMakeFiles/binary_tree_rpg.dir/game_base.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/binary_tree_rpg.dir/game_base.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/everaldo/Projects/binary_tree_rpg/game_base.c > CMakeFiles/binary_tree_rpg.dir/game_base.c.i
 
-CMakeFiles/binary_tree_rpg.dir/tree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/tree.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/tree.c -o CMakeFiles/binary_tree_rpg.dir/tree.c.s
+CMakeFiles/binary_tree_rpg.dir/game_base.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/game_base.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/game_base.c -o CMakeFiles/binary_tree_rpg.dir/game_base.c.s
+
+CMakeFiles/binary_tree_rpg.dir/game_classes.c.o: CMakeFiles/binary_tree_rpg.dir/flags.make
+CMakeFiles/binary_tree_rpg.dir/game_classes.c.o: ../game_classes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/binary_tree_rpg.dir/game_classes.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/binary_tree_rpg.dir/game_classes.c.o -c /home/everaldo/Projects/binary_tree_rpg/game_classes.c
+
+CMakeFiles/binary_tree_rpg.dir/game_classes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/binary_tree_rpg.dir/game_classes.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/everaldo/Projects/binary_tree_rpg/game_classes.c > CMakeFiles/binary_tree_rpg.dir/game_classes.c.i
+
+CMakeFiles/binary_tree_rpg.dir/game_classes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/game_classes.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/game_classes.c -o CMakeFiles/binary_tree_rpg.dir/game_classes.c.s
+
+CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o: CMakeFiles/binary_tree_rpg.dir/flags.make
+CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o: ../game_ascii_arts.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o -c /home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c
+
+CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c > CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.i
+
+CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c -o CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.s
+
+CMakeFiles/binary_tree_rpg.dir/game_story.c.o: CMakeFiles/binary_tree_rpg.dir/flags.make
+CMakeFiles/binary_tree_rpg.dir/game_story.c.o: ../game_story.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/binary_tree_rpg.dir/game_story.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/binary_tree_rpg.dir/game_story.c.o -c /home/everaldo/Projects/binary_tree_rpg/game_story.c
+
+CMakeFiles/binary_tree_rpg.dir/game_story.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/binary_tree_rpg.dir/game_story.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/everaldo/Projects/binary_tree_rpg/game_story.c > CMakeFiles/binary_tree_rpg.dir/game_story.c.i
+
+CMakeFiles/binary_tree_rpg.dir/game_story.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/binary_tree_rpg.dir/game_story.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/everaldo/Projects/binary_tree_rpg/game_story.c -o CMakeFiles/binary_tree_rpg.dir/game_story.c.s
 
 # Object files for target binary_tree_rpg
 binary_tree_rpg_OBJECTS = \
 "CMakeFiles/binary_tree_rpg.dir/main.c.o" \
-"CMakeFiles/binary_tree_rpg.dir/tree.c.o"
+"CMakeFiles/binary_tree_rpg.dir/game_base.c.o" \
+"CMakeFiles/binary_tree_rpg.dir/game_classes.c.o" \
+"CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o" \
+"CMakeFiles/binary_tree_rpg.dir/game_story.c.o"
 
 # External object files for target binary_tree_rpg
 binary_tree_rpg_EXTERNAL_OBJECTS =
 
 binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/main.c.o
-binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/tree.c.o
+binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/game_base.c.o
+binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/game_classes.c.o
+binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o
+binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/game_story.c.o
 binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/build.make
 binary_tree_rpg: CMakeFiles/binary_tree_rpg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable binary_tree_rpg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable binary_tree_rpg"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/binary_tree_rpg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
