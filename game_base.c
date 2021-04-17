@@ -30,7 +30,7 @@ void deathManager(struct  Node *n) {
         puts("  .---.\n"
              " /     \\\n"
              "( () () )\n"
-             " \\  M  / VK\n"
+             " \\  M  / \n"
              "  |HHH|\n"
              "  `---'\n"
              "\n"
