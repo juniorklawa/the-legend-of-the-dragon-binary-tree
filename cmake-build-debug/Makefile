@@ -142,6 +142,114 @@ binary_tree_rpg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/build
 .PHONY : binary_tree_rpg/fast
 
+game_ascii_arts.o: game_ascii_arts.c.o
+
+.PHONY : game_ascii_arts.o
+
+# target to build an object file
+game_ascii_arts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o
+.PHONY : game_ascii_arts.c.o
+
+game_ascii_arts.i: game_ascii_arts.c.i
+
+.PHONY : game_ascii_arts.i
+
+# target to preprocess a source file
+game_ascii_arts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.i
+.PHONY : game_ascii_arts.c.i
+
+game_ascii_arts.s: game_ascii_arts.c.s
+
+.PHONY : game_ascii_arts.s
+
+# target to generate assembly for a file
+game_ascii_arts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.s
+.PHONY : game_ascii_arts.c.s
+
+game_base.o: game_base.c.o
+
+.PHONY : game_base.o
+
+# target to build an object file
+game_base.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_base.c.o
+.PHONY : game_base.c.o
+
+game_base.i: game_base.c.i
+
+.PHONY : game_base.i
+
+# target to preprocess a source file
+game_base.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_base.c.i
+.PHONY : game_base.c.i
+
+game_base.s: game_base.c.s
+
+.PHONY : game_base.s
+
+# target to generate assembly for a file
+game_base.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_base.c.s
+.PHONY : game_base.c.s
+
+game_classes.o: game_classes.c.o
+
+.PHONY : game_classes.o
+
+# target to build an object file
+game_classes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_classes.c.o
+.PHONY : game_classes.c.o
+
+game_classes.i: game_classes.c.i
+
+.PHONY : game_classes.i
+
+# target to preprocess a source file
+game_classes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_classes.c.i
+.PHONY : game_classes.c.i
+
+game_classes.s: game_classes.c.s
+
+.PHONY : game_classes.s
+
+# target to generate assembly for a file
+game_classes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_classes.c.s
+.PHONY : game_classes.c.s
+
+game_story.o: game_story.c.o
+
+.PHONY : game_story.o
+
+# target to build an object file
+game_story.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_story.c.o
+.PHONY : game_story.c.o
+
+game_story.i: game_story.c.i
+
+.PHONY : game_story.i
+
+# target to preprocess a source file
+game_story.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_story.c.i
+.PHONY : game_story.c.i
+
+game_story.s: game_story.c.s
+
+.PHONY : game_story.s
+
+# target to generate assembly for a file
+game_story.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_story.c.s
+.PHONY : game_story.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -169,33 +277,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/main.c.s
 .PHONY : main.c.s
 
-tree.o: tree.c.o
-
-.PHONY : tree.o
-
-# target to build an object file
-tree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/tree.c.o
-.PHONY : tree.c.o
-
-tree.i: tree.c.i
-
-.PHONY : tree.i
-
-# target to preprocess a source file
-tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/tree.c.i
-.PHONY : tree.c.i
-
-tree.s: tree.c.s
-
-.PHONY : tree.s
-
-# target to generate assembly for a file
-tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/tree.c.s
-.PHONY : tree.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,12 +286,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... binary_tree_rpg"
+	@echo "... game_ascii_arts.o"
+	@echo "... game_ascii_arts.i"
+	@echo "... game_ascii_arts.s"
+	@echo "... game_base.o"
+	@echo "... game_base.i"
+	@echo "... game_base.s"
+	@echo "... game_classes.o"
+	@echo "... game_classes.i"
+	@echo "... game_classes.s"
+	@echo "... game_story.o"
+	@echo "... game_story.i"
+	@echo "... game_story.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... tree.o"
-	@echo "... tree.i"
-	@echo "... tree.s"
 .PHONY : help
 
 

@@ -93,12 +93,12 @@ clean: CMakeFiles/binary_tree_rpg.dir/clean
 CMakeFiles/binary_tree_rpg.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target binary_tree_rpg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target binary_tree_rpg"
 .PHONY : CMakeFiles/binary_tree_rpg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/binary_tree_rpg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/binary_tree_rpg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/binary_tree_rpg.dir/rule

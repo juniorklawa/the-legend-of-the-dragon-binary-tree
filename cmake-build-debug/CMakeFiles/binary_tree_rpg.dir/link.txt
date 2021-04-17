@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/binary_tree_rpg.dir/main.c.o CMakeFiles/binary_tree_rpg.dir/tree.c.o -o binary_tree_rpg 
+/usr/bin/cc -g CMakeFiles/binary_tree_rpg.dir/main.c.o CMakeFiles/binary_tree_rpg.dir/game_base.c.o CMakeFiles/binary_tree_rpg.dir/game_classes.c.o CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o CMakeFiles/binary_tree_rpg.dir/game_story.c.o -o binary_tree_rpg 
