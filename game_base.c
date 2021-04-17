@@ -12,6 +12,8 @@ void endOfChapterManager(struct  Node *n, struct RPGGame *game) {
     }
 
     if(n->key == 9 || n->key == 10){
+
+
         printf ("%s\n", n->description);
         n->left = game->secondChapter;
         puts(n->nextNodeAsciiArt);

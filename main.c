@@ -16,7 +16,7 @@ int main() {
     firstChapter->left = newNode(7, key7Description);
     firstChapter->right = newNode(8, key8Description);
     firstChapter->left->left = newNodeEndOfChapter(9, key9Description, warriorAscii);
-    firstChapter->right->left = newNodeEndOfChapter(10, key10Description, mageAscii);
+    firstChapter->left->right = newNodeEndOfChapter(10, key10Description, mageAscii);
 
 
     struct Node *secondChapter = newNode(11, key11Description);
