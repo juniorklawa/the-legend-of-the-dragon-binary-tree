@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct Node {
     int key;
@@ -14,7 +15,7 @@ typedef struct Player {
     int score;
     char* name;
     int class;
-};
+} Player;
 
 typedef struct RPGGame {
     struct Node *introduction;
@@ -62,6 +63,92 @@ struct Player *newPlayer(int health, int score, char* name, int class){
     player->health = 100;
     player->score = 0;
 }
+
+void save(char *file_name, Player *p, int key)
+{
+    int len = strlen(file_name);
+    char *last_four = &file_name[len-4];
+    if((len) > 3 && (strcmp(last_four, ".txt") != 0))
+    {
+		strcat(file_name, ".txt");
+    }
+    FILE *arquivo = fopen(file_name, "w");
+    if(arquivo==NULL)
+    {
+        printf("Arquivo não enontrado\n\n");
+        return 0;
+    }
+
+    fprintf(arquivo, "%s\n", p->name);
+    fprintf(arquivo, "%d\n", p->health);
+    fprintf(arquivo, "%d\n", p->score);
+    fprintf(arquivo, "%d\n", p->class);
+    fprintf(arquivo, "%d\n", key);
+
+    printf("\nJOGO SALVO!!!\n");
+    fclose(arquivo);
+}
+
+FILE * load(char *file_name, Player *p, int *key)
+{
+    int len = strlen(file_name);
+    char *last_four = &file_name[len-4];;
+    if((len) > 3 && (strcmp(last_four, ".txt") != 0))
+    {
+        strcat(file_name, ".txt");
+    }
+
+
+    FILE *arquivo = fopen(file_name, "r");
+
+    int aux;
+    char line[256], name[50];
+
+    if(arquivo == NULL)
+    {
+        printf("Arquivo não encontrado \n\n");
+        return NULL;
+    }
+    else
+    {
+        fgets(line, 256, arquivo);
+        sscanf(line, "%s ", name);
+        p->name = name;
+        fgets(line, 256, arquivo);
+        sscanf(line, "%d ", &aux);
+        p->health = aux;
+        fgets(line, 256, arquivo);
+        sscanf(line, "%d ", &aux);
+        p->score = aux;
+        fgets(line, 256, arquivo);
+        sscanf(line, "%d ", &aux);
+        p->class = aux;
+        fgets(line, 256, arquivo);
+        sscanf(line, "%d ", &aux);
+        *key = aux;
+        printf("SAVE CARREGADO!!\n\n\n");
+        fclose(arquivo);
+        return arquivo;
+    }
+
+}
+
+void autoSave (Player *p, int key)
+{
+    char name[50] = "autosave.txt";
+    save(name, p, key);
+}
+
+void loadautoSave(Player *p, int *key)
+{
+    char name[50] = "autosave.txt";
+    int aux;
+    load(name, p, &aux);
+    *key = aux;
+
+}
+
+
 
 
 void print_story (struct  Node *n, struct RPGGame *game){
