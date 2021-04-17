@@ -19,7 +19,7 @@ typedef struct Player {
     int score;
     char* name;
     int class;
-};
+} Player;
 
 typedef struct RPGGame {
     struct Node *firstChapter;
