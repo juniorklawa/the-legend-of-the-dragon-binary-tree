@@ -224,3 +224,9 @@ void loadautoSave(Player *p, int *key){
     load(p, &aux, 0);
     *key = aux;
 }
+
+void newName(Player *p){
+	char temp[50];	
+	scanf("\n\n%s", temp);
+	p->name = temp;
+}

@@ -28,6 +28,7 @@ int main() {
     secondChapter->left = newNode(12, key12Description);
     secondChapter->right = newNode(13, key13Description);
 
+	struct Player *player = newPlayer(0, 0, "temp", 0);
 
 
 
@@ -51,11 +52,16 @@ int main() {
 
     scanf("\n\n%d", &menuChoice);
     
+	
     if (menuChoice == 1) {
+		newName(player);
         game_manager(rpgGame->currentTree, rpgGame);
-    } else {
-        //carregar jogo
+    } else if (menuChoice == 2){
+		int key;
+        load(player, &key, 1);
+		game_manager(rpgGame->currentTree, rpgGame);
     }
+	
 
 
 }
