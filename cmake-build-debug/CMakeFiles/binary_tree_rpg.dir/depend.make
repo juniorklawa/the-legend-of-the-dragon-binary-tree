@@ -7,6 +7,8 @@ CMakeFiles/binary_tree_rpg.dir/game_base.c.o: ../game_base.c
 CMakeFiles/binary_tree_rpg.dir/game_base.c.o: ../game_base.h
 CMakeFiles/binary_tree_rpg.dir/game_base.c.o: ../game_classes.h
 
+CMakeFiles/binary_tree_rpg.dir/game_challenges.c.o: ../game_challenges.c
+
 CMakeFiles/binary_tree_rpg.dir/game_classes.c.o: ../game_classes.c
 CMakeFiles/binary_tree_rpg.dir/game_classes.c.o: ../game_classes.h
 
@@ -14,6 +16,7 @@ CMakeFiles/binary_tree_rpg.dir/game_story.c.o: ../game_story.c
 
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../game_ascii_arts.c
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../game_base.h
+CMakeFiles/binary_tree_rpg.dir/main.c.o: ../game_challenges.c
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../game_classes.h
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../game_story.c
 CMakeFiles/binary_tree_rpg.dir/main.c.o: ../main.c

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/game_ascii_arts.c.o"
   "/home/everaldo/Projects/binary_tree_rpg/game_base.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/game_base.c.o"
+  "/home/everaldo/Projects/binary_tree_rpg/game_challenges.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/game_challenges.c.o"
   "/home/everaldo/Projects/binary_tree_rpg/game_classes.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/game_classes.c.o"
   "/home/everaldo/Projects/binary_tree_rpg/game_story.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/game_story.c.o"
   "/home/everaldo/Projects/binary_tree_rpg/main.c" "/home/everaldo/Projects/binary_tree_rpg/cmake-build-debug/CMakeFiles/binary_tree_rpg.dir/main.c.o"

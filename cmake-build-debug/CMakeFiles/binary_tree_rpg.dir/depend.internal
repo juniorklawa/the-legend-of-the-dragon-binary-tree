@@ -7,6 +7,8 @@ CMakeFiles/binary_tree_rpg.dir/game_base.c.o
  /home/everaldo/Projects/binary_tree_rpg/game_base.c
  /home/everaldo/Projects/binary_tree_rpg/game_base.h
  /home/everaldo/Projects/binary_tree_rpg/game_classes.h
+CMakeFiles/binary_tree_rpg.dir/game_challenges.c.o
+ /home/everaldo/Projects/binary_tree_rpg/game_challenges.c
 CMakeFiles/binary_tree_rpg.dir/game_classes.c.o
  /home/everaldo/Projects/binary_tree_rpg/game_classes.c
  /home/everaldo/Projects/binary_tree_rpg/game_classes.h
@@ -15,6 +17,7 @@ CMakeFiles/binary_tree_rpg.dir/game_story.c.o
 CMakeFiles/binary_tree_rpg.dir/main.c.o
  /home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c
  /home/everaldo/Projects/binary_tree_rpg/game_base.h
+ /home/everaldo/Projects/binary_tree_rpg/game_challenges.c
  /home/everaldo/Projects/binary_tree_rpg/game_classes.h
  /home/everaldo/Projects/binary_tree_rpg/game_story.c
  /home/everaldo/Projects/binary_tree_rpg/main.c

@@ -196,6 +196,33 @@ game_base.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_base.c.s
 .PHONY : game_base.c.s
 
+game_challenges.o: game_challenges.c.o
+
+.PHONY : game_challenges.o
+
+# target to build an object file
+game_challenges.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_challenges.c.o
+.PHONY : game_challenges.c.o
+
+game_challenges.i: game_challenges.c.i
+
+.PHONY : game_challenges.i
+
+# target to preprocess a source file
+game_challenges.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_challenges.c.i
+.PHONY : game_challenges.c.i
+
+game_challenges.s: game_challenges.c.s
+
+.PHONY : game_challenges.s
+
+# target to generate assembly for a file
+game_challenges.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_tree_rpg.dir/build.make CMakeFiles/binary_tree_rpg.dir/game_challenges.c.s
+.PHONY : game_challenges.c.s
+
 game_classes.o: game_classes.c.o
 
 .PHONY : game_classes.o
@@ -292,6 +319,9 @@ help:
 	@echo "... game_base.o"
 	@echo "... game_base.i"
 	@echo "... game_base.s"
+	@echo "... game_challenges.o"
+	@echo "... game_challenges.i"
+	@echo "... game_challenges.s"
 	@echo "... game_classes.o"
 	@echo "... game_classes.i"
 	@echo "... game_classes.s"

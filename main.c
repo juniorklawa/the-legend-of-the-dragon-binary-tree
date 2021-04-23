@@ -2,13 +2,18 @@
 #include "game_base.h"
 #include "game_classes.h"
 #include "game_story.c"
+#include "game_challenges.c"
 #include "game_ascii_arts.c"
 
 
 int main() {
+
+    struct Challenge *firstChallenge = newChallenge(challenge1, 2);
+
+
     struct Node *introductionTree = newNode(1, key1Description);
     introductionTree->left = newNode(2, key2Description);
-    introductionTree->right = newNode(3, key3Description);
+    introductionTree->right = newNodeChallenge(3, key3Description,firstChallenge);
     introductionTree->left->left = newNodeEndOfChapter(4, key4Description, firstChapterAscii);
     introductionTree->left->right = newNodeEndOfChapter(5, key5Description, firstChapterAscii);
 
@@ -22,6 +27,9 @@ int main() {
     struct Node *secondChapter = newNode(11, key11Description);
     secondChapter->left = newNode(12, key12Description);
     secondChapter->right = newNode(13, key13Description);
+
+
+
 
 
     struct RPGGame *rpgGame = newRPGGame(introductionTree, firstChapter, secondChapter);
@@ -46,7 +54,7 @@ int main() {
     if (menuChoice == 1) {
         game_manager(rpgGame->currentTree, rpgGame);
     } else {
-        // carregar jogo
+        //carregar jogo
     }
 
 

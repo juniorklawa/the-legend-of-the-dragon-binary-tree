@@ -13,8 +13,6 @@ void endOfChapterManager(struct  Node *n, struct RPGGame *game) {
     }
 
     if(n->key == 9 || n->key == 10){
-
-
         printf ("%s\n", n->description);
         n->left = game->secondChapter;
         puts(n->nextNodeAsciiArt);
@@ -22,8 +20,34 @@ void endOfChapterManager(struct  Node *n, struct RPGGame *game) {
     }
 }
 
+void chapterWithChallengeManager(struct  Node *n, struct RPGGame *game) {
+    if(n->key == 3){
+        puts("D E S A F I O");
+        printf ("%s\n", n->challenge->description);
+        int choice = 0;
+        scanf("%d", &choice);
+
+        if(choice == n->challenge->rightAnswer){
+            puts("Você passou pelo desafio! \n\n");
+            n->left = game->firstChapter->left;
+            game_manager(n->left, game);
+        } else {
+            //diminuir vida do player
+            puts("Você morreu.");
+            puts("  .---.\n"
+                 " /     \\\n"
+                 "( () () )\n"
+                 " \\  M  / \n"
+                 "  |HHH|\n"
+                 "  `---'\n"
+                 "\n"
+            );
+        }
+    }
+}
+
 void deathManager(struct  Node *n) {
-    if(n->key == 8 || n->key == 3 || n->key == 12) {
+    if(n->key == 8 || n->key == 12) {
 
         printf ("%s\n", n->description);
 
@@ -45,6 +69,10 @@ void game_manager (struct  Node *n, struct RPGGame *game){
 
     int choice = 0;
     if (n != NULL) {
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+        }
 
         if(n->isEndOfChapter == 1){
             endOfChapterManager(n, game);

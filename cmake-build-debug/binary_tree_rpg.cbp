@@ -85,6 +85,9 @@
 		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_base.h">
 			<Option target="binary_tree_rpg"/>
 		</Unit>
+		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_challenges.c">
+			<Option target="binary_tree_rpg"/>
+		</Unit>
 		<Unit filename="/home/everaldo/Projects/binary_tree_rpg/game_classes.c">
 			<Option target="binary_tree_rpg"/>
 		</Unit>

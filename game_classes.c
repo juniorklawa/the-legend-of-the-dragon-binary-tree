@@ -18,6 +18,24 @@ struct Node *newNode(int k, char* description) {
     return node;
 }
 
+
+struct Node *newNodeChallenge(int k, char* description, struct Challenge *challenge) {
+    struct Node *node = (struct Node *)malloc(sizeof(struct Node));
+    node->key = k;
+    node->description = description;
+    node->right = node->left = NULL;
+    node->challenge = challenge;
+    return node;
+}
+
+struct Node *newChallenge(char* description, int rightAnswer) {
+    struct Challenge *challenge = (struct Challenge *)malloc(sizeof(struct Challenge));
+    challenge->description = description;
+    challenge->rightAnswer = rightAnswer;
+
+    return challenge;
+}
+
 struct Node *newNodeEndOfChapter(int k, char* description, char* nextAsciiCode) {
     struct Node *node = (struct Node *)malloc(sizeof(struct Node));
     node->key = k;
