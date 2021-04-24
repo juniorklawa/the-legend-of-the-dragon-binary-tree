@@ -8,15 +8,15 @@
 
 typedef struct Node {
     int key;
-    char* description;
+    char *description;
     struct Node *left, *right;
     int isEndOfChapter;
-    struct  Challenge *challenge;
-    char* nextNodeAsciiArt;
+    struct Challenge *challenge;
+    char *nextNodeAsciiArt;
 };
 
 typedef struct Challenge {
-    char* description;
+    char *description;
     int rightAnswer;
 } Challenge;
 
@@ -24,25 +24,34 @@ typedef struct Challenge {
 typedef struct Player {
     int health;
     int score;
-    char* name;
+    char *name;
     int class;
 } Player;
 
 typedef struct RPGGame {
-    struct Node *firstChapter;
-    struct Node *secondChapter;
     struct Node *currentTree;
+    struct Node *chapter1;
+    struct Node *chapter2;
+    struct Node *chapter3;
+    struct Node *chapter4;
+    struct Node *chapter5;
+    struct Node *chapter6;
+    struct Node *chapter7;
+    struct Node *chapter8;
 };
 
 
-struct RPGGame *newRPGGame(struct Node *introduction, struct Node *firstChapter, struct Node *secondChapter);
+struct RPGGame *newRPGGame(struct Node *chapter1, struct Node *chapter2, struct Node *chapter3, struct Node *chapter4,
+                           struct Node *chapter5, struct Node *chapter6, struct Node *chapter7, struct Node *chapter8);
 
-struct Node *newNode(int k, char* description);
+struct Node *newNode(int k, char *description);
 
-struct Node *newNodeEndOfChapter(int k, char* description, char* nextAsciiCode);
+struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, struct Challenge *challenge);
 
-struct Node *newNodeChallenge(int k, char* description, struct Challenge *challenge);
-struct Node *newChallenge(char* description, int rightAnswer);
-struct Player *newPlayer(int health, int score, char* name, int class);
+struct Node *newNodeChallenge(int k, char *description, struct Challenge *challenge);
+
+struct Node *newChallenge(char *description, int rightAnswer);
+
+struct Player *newPlayer(int health, int score, char *name, int class);
 
 #endif //BINARY_TREE_RPG_GAME_CLASSES_H

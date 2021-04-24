@@ -4,24 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void endOfChapterManager(struct  Node *n, struct RPGGame *game) {
-    if(n->key == 4 || n->key == 5){
-        printf ("%s\n", n->description);
-        n->left = game->firstChapter;
-        puts(n->nextNodeAsciiArt);
-        game_manager(n->left, game);
-    }
 
-    if(n->key == 9 || n->key == 10){
-        printf ("%s\n", n->description);
-        n->left = game->secondChapter;
-        puts(n->nextNodeAsciiArt);
-        game_manager(n->left, game);
-    }
-}
 
 void chapterWithChallengeManager(struct  Node *n, struct RPGGame *game) {
-    if(n->key == 3){
         puts("D E S A F I O");
         printf ("%s\n", n->challenge->description);
         int choice = 0;
@@ -29,8 +14,7 @@ void chapterWithChallengeManager(struct  Node *n, struct RPGGame *game) {
 
         if(choice == n->challenge->rightAnswer){
             puts("Você passou pelo desafio! \n\n");
-            n->left = game->firstChapter->left;
-            game_manager(n->left, game);
+            return;
         } else {
             //diminuir vida do player
             puts("Você morreu.");
@@ -42,9 +26,95 @@ void chapterWithChallengeManager(struct  Node *n, struct RPGGame *game) {
                  "  `---'\n"
                  "\n"
             );
+            exit(0);
         }
+}
+
+void endOfChapterManager(struct  Node *n, struct RPGGame *game) {
+    if(n->key == 4 || n->key == 5){
+        printf ("%s\n", n->description);
+        n->left = game->chapter2;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 9 || n->key == 10){
+        printf ("%s\n", n->description);
+        n->left = game->chapter3;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 12 || n->key == 15 || n->key == 16){
+        printf ("%s\n", n->description);
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+            puts("Após isso vocẽ rastreia o ninho e vai em busca de informações");
+        }
+        n->left = game->chapter4;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 18 || n->key == 19){
+        printf ("%s\n", n->description);
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+        }
+
+        n->left = game->chapter5;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 25 || n->key == 26 || n->key == 27 || n->key == 28){
+        printf ("%s\n", n->description);
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+        }
+
+        n->left = game->chapter6;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 30 || n->key == 31){
+        printf ("%s\n", n->description);
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+            puts("Após derrotar o mimico, você utiliza uma de suas poções e segue seu trajeto em direção rio acima até achar a cachoeira que habita \"A Grande Chama\"");
+        }
+
+        n->left = game->chapter7;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 36 || n->key == 37 || n->key == 38 || n->key == 39){
+        printf ("%s\n", n->description);
+
+        if(n->challenge != NULL){
+            chapterWithChallengeManager(n,game);
+        }
+
+        n->left = game->chapter8;
+        puts(n->nextNodeAsciiArt);
+        game_manager(n->left, game);
+    }
+
+    if(n->key == 41 || n->key == 42){
+        printf ("%s\n", n->description);
+        n->left = game->chapter8;
+        puts(n->nextNodeAsciiArt);
+        exit(0);
     }
 }
+
+
 
 void deathManager(struct  Node *n) {
 //    if(n->key == 8 || n->key == 12) {
@@ -70,9 +140,7 @@ void game_manager (struct  Node *n, struct RPGGame *game){
     int choice = 0;
     if (n != NULL) {
 
-        if(n->challenge != NULL){
-            chapterWithChallengeManager(n,game);
-        }
+
 
         if(n->isEndOfChapter == 1){
             endOfChapterManager(n, game);
