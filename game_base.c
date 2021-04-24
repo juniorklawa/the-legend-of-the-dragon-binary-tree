@@ -47,22 +47,22 @@ void chapterWithChallengeManager(struct  Node *n, struct RPGGame *game) {
 }
 
 void deathManager(struct  Node *n) {
-    if(n->key == 8 || n->key == 12) {
-
-        printf ("%s\n", n->description);
-
-        puts("Você morreu.");
-        puts("  .---.\n"
-             " /     \\\n"
-             "( () () )\n"
-             " \\  M  / \n"
-             "  |HHH|\n"
-             "  `---'\n"
-             "\n"
-        );
-
-        exit(0);
-    }
+//    if(n->key == 8 || n->key == 12) {
+//
+//        printf ("%s\n", n->description);
+//
+//        puts("Você morreu.");
+//        puts("  .---.\n"
+//             " /     \\\n"
+//             "( () () )\n"
+//             " \\  M  / \n"
+//             "  |HHH|\n"
+//             "  `---'\n"
+//             "\n"
+//        );
+//
+//        exit(0);
+//    }
 }
 
 void game_manager (struct  Node *n, struct RPGGame *game){

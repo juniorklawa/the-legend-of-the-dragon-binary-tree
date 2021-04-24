@@ -8,6 +8,18 @@
 
 /home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c
 
+/home/everaldo/Projects/binary_tree_rpg/game_base.c
+game_classes.h
+/home/everaldo/Projects/binary_tree_rpg/game_classes.h
+game_base.h
+/home/everaldo/Projects/binary_tree_rpg/game_base.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
 /home/everaldo/Projects/binary_tree_rpg/game_base.h
 
 /home/everaldo/Projects/binary_tree_rpg/game_challenges.c
