@@ -52,27 +52,6 @@ void chapterWithChallengeManager(struct Node *n, struct Player *player) {
 }
 
 void endOfGameManager(struct Player *player){
-    puts("\n"
-         "                                               _   __,----'~~~~~~~~~`-----.__\n"
-         "                                        .  .    `//====-              ____,-'~`\n"
-         "                        -.            \\_|// .   /||\\\\  `~~~~`---.___./\n"
-         "                  ______-==.       _-~o  `\\/    |||  \\\\           _,'`\n"
-         "            __,--'   ,=='||\\=_    ;_,_,/ _-'|-   |`\\   \\\\        ,'\n"
-         "         _-'      ,='    | \\\\`.    '',/~7  /-   /  ||   `\\.     /\n"
-         "       .'       ,'       |  \\\\  \\_  \"  /  /-   /   ||      \\   /\n"
-         "      / _____  /         |     \\\\.`-_/  /|- _/   ,||       \\ /\n"
-         "     ,-'     `-|--'~~`--_ \\     `==-/  `| \\'--===-'       _/`\n"
-         "               '         `-|      /|    )-'\\~'      _,--\"'\n"
-         "                           '-~^\\_/ |    |   `\\_   ,^             /\\\n"
-         "                                /  \\     \\__   \\/~               `\\__\n"
-         "                            _,-' _/'\\ ,-'~____-'`-/                 ``===\\\n"
-         "                           ((->/'    \\|||' `.     `\\.  ,                _||\n"
-         "             ./                       \\_     `\\      `~---|__i__i__\\--~'_/\n"
-         "            <_n_                     __-^-_    `)  \\-.______________,-~'\n"
-         "             `B'\\)                  ///,-'~`__--^-  |-------~~~~^'\n"
-         "             /^>                           ///,--~`-\\\n"
-         "            `  `                                                 ");
-
     puts("Obrigado por jogar!\n");
     puts("Desenvolvido e roteirizado por:\n");
     puts("Caio Henrique Marques Meira");
@@ -87,6 +66,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
 
     if(n->key == 41 || n->key == 42) {
         printf("%s\n", n->description);
+        puts(n->nextNodeAsciiArt);
         endOfGameManager(player);
     }
 
