@@ -200,7 +200,7 @@ void deathManager(struct Node *n, struct Player *player) {
 
 void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
-	autoSave(n, game, player);
+	save(n, game, player);
     int choice;
     if (n != NULL) {
         if (n->left == NULL && n->right==NULL) {
@@ -225,38 +225,9 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
 }
 
-int save(struct Node *n, struct RPGGame *game, Player *p, int l) {
-    int save_n;
+int save(struct Node *n, struct RPGGame *game, Player *p) {
     char file_name[50];
-    if (l != 0) {
-        printf("Selecione o slot do save (1-6)\n\n");
-        scanf("%d", &save_n);
-        switch (save_n) {
-            case 1:
-                strcpy(file_name, "save1.txt");
-                break;
-            case 2:
-                strcpy(file_name, "save2.txt");
-                break;
-            case 3:
-                strcpy(file_name, "save3.txt");
-                break;
-            case 4:
-                strcpy(file_name, "save4.txt");
-                break;
-            case 5:
-                strcpy(file_name, "save5.txt");
-                break;
-            case 6:
-                strcpy(file_name, "save6.txt");
-                break;
-            default:
-                printf("Save slot inválido");
-                break;
-        }
-    } else {
-        strcpy(file_name, "autosave.txt");
-    }
+    strcpy(file_name, "autosave.txt");
 
     FILE *arquivo = fopen(file_name, "w");
     if (arquivo == NULL) {
@@ -269,7 +240,6 @@ int save(struct Node *n, struct RPGGame *game, Player *p, int l) {
 	fprintf(arquivo, "%d\n", game->currentTree->key);
     fprintf(arquivo, "%d\n", n->key);
 
-    //printf("\nJOGO SALVO!!!\n");
     fclose(arquivo);
 
     return 0;
@@ -278,41 +248,9 @@ int save(struct Node *n, struct RPGGame *game, Player *p, int l) {
 
 
 
-FILE *load(struct Node *n, struct RPGGame *game, Player *p, int l) {
-    int load_n;
+FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
     char file_name[50];
-    if (l != 0) {
-        printf("Selecione o slot do save (0-6) 0 é o autosave\n\n");
-        scanf("%d", &load_n);
-        switch (load_n) {
-            case 0:
-                strcpy(file_name, "autosave.txt");
-                break;
-            case 1:
-                strcpy(file_name, "save1.txt");
-                break;
-            case 2:
-                strcpy(file_name, "save2.txt");
-                break;
-            case 3:
-                strcpy(file_name, "save3.txt");
-                break;
-            case 4:
-                strcpy(file_name, "save4.txt");
-                break;
-            case 5:
-                strcpy(file_name, "save5.txt");
-                break;
-            case 6:
-                strcpy(file_name, "save6.txt");
-                break;
-            default:
-                printf("Save slot inválido");
-                break;
-        }
-    } else
-        strcpy(file_name, "autosave.txt");
-
+    strcpy(file_name, "autosave.txt");
 
     FILE *arquivo = fopen(file_name, "r");
 
@@ -368,14 +306,6 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p, int l) {
         return arquivo;
     }
 
-}
-
-void autoSave(struct Node *n, struct RPGGame *game, Player *p) {
-    save(n, game, p, 0);
-}
-
-void loadautoSave(struct Node *n, struct RPGGame *game, Player *p) {
-    load(n, game, p, 0);
 }
 
 void newName(Player *p) {

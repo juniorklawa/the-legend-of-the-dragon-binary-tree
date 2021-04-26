@@ -107,7 +107,7 @@ int main() {
         rpgGame->currentTree = rpgGame->chapter1;
         game_manager(rpgGame->currentTree, rpgGame, player);
     } else if (menuChoice == 2) {
-        load(rpgGame->currentTree, rpgGame, player, 1);
+        load(rpgGame->currentTree, rpgGame, player);
     }
 
 
