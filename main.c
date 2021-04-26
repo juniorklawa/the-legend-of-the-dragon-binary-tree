@@ -67,9 +67,9 @@ int main() {
     struct Node *chapter7 = newNode(33, key33Description);
     chapter7->left = newNode(34, key34Description);
     chapter7->right = newNode(35, key35Description);
-    chapter7->left->left = newNodeEndOfChapter(36, key36Description, "", NULL);
+    chapter7->left->left = newNode(36, key36Description);
     chapter7->left->right = newNodeEndOfChapter(37, key37Description, "", NULL);
-    chapter7->right->left = newNodeEndOfChapter(38, key38Description, "", NULL);
+    chapter7->right->left = newNode(38, key38Description);
     chapter7->right->right = newNodeEndOfChapter(39, key39Description, "", challenge7);
 
     //CHAPTER 8
@@ -78,7 +78,7 @@ int main() {
     chapter8->right = newNodeEndOfChapter(42, key42Description, "", NULL);
 
 
-    struct Player *player = newPlayer(0, 0, "temp", 0);
+    struct Player *player = newPlayer(0, "temp");
 
 
     struct RPGGame *rpgGame = newRPGGame(chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7,
@@ -105,7 +105,7 @@ int main() {
     if (menuChoice == 1) {
 //		newName(player);
         rpgGame->currentTree = rpgGame->chapter1;
-        game_manager(rpgGame->currentTree, rpgGame);
+        game_manager(rpgGame->currentTree, rpgGame, player);
     } else if (menuChoice == 2) {
 //		int key;
 //        load(player, &key, 1);

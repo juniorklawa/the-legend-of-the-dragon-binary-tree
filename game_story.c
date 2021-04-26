@@ -123,9 +123,8 @@ static char *key23Description = "Você abre a porta, ela desliza suavamente cont
 
 static char *key24Description = "Você percebe que o grupo está mais distante, você observa o salão e começa a pensar em uma estrategia\n"
                                 "\n"
-                                "1. Se esconder atrás do trono e esperar por uma oportunidade\n"
-                                "\n"
-                                "2. Enfrentar o grupo de frente confiante na sua habilidade";
+                                "1. Enfrentar o grupo de frente confiante na sua habilidade\n"
+                                "2. Se esconder atrás do trono e esperar por uma oportunidade\n";
 
 static char *key25Description = "Você corre pelo corredor, ele parecia subir gradualmente, incontáveis livros decoram o lugar, você se perguntaria o porque de goblins guardarem livros, mas após ver a inteligencia e como o rei goblin se portava, aqueles livros pareciam ser todos dele. \n"
                                 "Uma porta aparece a sua frente, você a abre devagar e uma espécie de sala se abre, era uma cabana em meio a uma floresta, você estava salvo.";
@@ -138,7 +137,7 @@ static char *key27Description = "Você decide enfrentar o grupo de frente, derro
 
 static char *key28Description = "Você se esconde atrás do trono, o grupo de goblins entra, se assusta com a situação, não se aproximam do trono por medo e respeito, pegam o corpo do seu rei e levam para a câmara interna, o caminho se abre e você consegue fugir apenas matando dois goblins furtivamente, você estava na floresta novamente.";
 
-static char *key29Description = "Você olha para os lados e vê apenas arvores, o documento que você achou no corpo do Rei goblin parece ter um mapa e informações sobre um inimigo \"supremo\", os monstros o chamam de A Grande chama, parece que sua caverna fica embaixo de uma cachoeira no sul, dizem que seu corpo é integralmente de chamas e ele mora ali para evitar botar fogo na floresta com seu calor.\n"
+static char *key29Description = "Após bravamente derrotar os Goblins, você olha para os lados e vê apenas arvores, o documento que você achou no corpo do Rei goblin parece ter um mapa e informações sobre um inimigo \"supremo\", os monstros o chamam de A Grande chama, parece que sua caverna fica embaixo de uma cachoeira no sul, dizem que seu corpo é integralmente de chamas e ele mora ali para evitar botar fogo na floresta com seu calor.\n"
                                 "Você caminha em direção ao sul e encontra um baú trancado.\n"
                                 "\n"
                                 "1. Abrir\n"
@@ -148,20 +147,16 @@ static char *key30Description = "Você abre o baú, na verdade ele era um mimico
 
 static char *key31Description = "Você ignora o bau e segue seu mapa em direção ao sul, é relativamente simples o trajeto, basta seguir o rio acima, e quando achassem a cachoeira achariam a caverna.";
 
-static char *key32Description = "Após derrotar o mimico, você utiliza uma de suas poções e segue seu trajeto em direção rio acima até achar a cachoeira que habita \"A Grande Chama\"";
-
 static char *key33Description = "Você encontra a cachoeira, um grande lago se abre a sua frente com uma cachoeira inimaginavelmente grande, eram varias quedas que alagavam uma imensa piscina, você precisa pensar em como enfrentar o temível monstro..\n"
                                 "\n"
                                 "\n"
-                                "1. Você decide mergulhar no lago para molhar suas roupas e equipamentos para tornar elas mais resistente a fogo\n"
-                                "\n"
-                                "2. Você entra na caverna cautelosamente, largou a ideia de molhar suas roupas para manter sua velocidade alta e mobilidade para enfrentar ele.";
+                                "1. Você entra na caverna cautelosamente, largou a ideia de molhar suas roupas para manter sua velocidade alta e mobilidade para enfrentar ele.\n"
+                                "2. Você decide mergulhar no lago para molhar suas roupas e equipamentos para tornar elas mais resistente a fogo\n";
 
 static char *key34Description = "Você entra na caverna e encontra uma pilha de ouro com um dragão de fogo em cima, seu corpo era inteiramente de fogo e tu se pergunta como o ouro não derretia com aquele calor.\n"
                                 "Dragões são criaturas gananciosas e estocam normalmente bens materiais, mas a pilha ali era imensa. Uma grande joia pairava em um pedestal do outro lado do salão, aquilo te chamou atenção\n"
                                 "\n"
                                 "1. Atacar diretamente o dragão enquanto ele dorme, tentando alcançar seu coração\n"
-                                "\n"
                                 "2. Ir até a joia de ouro e pegar ela";
 
 static char *key35Description = "Você mergulha no lago até suas roupas e equipamentos ficarem encharcados, você sente seu equipamento te pesar com o peso da agua.\n"
@@ -169,9 +164,8 @@ static char *key35Description = "Você mergulha no lago até suas roupas e equip
                                 "Dragões são criaturas gananciosas e estocam normalmente bens materiais, mas a pilha ali era imensa.\n"
                                 "Uma grande joia pairava em um pedestal do outro lado do salão, aquilo te chamou atenção\n"
                                 "\n"
-                                "1. Atacar diretamente o dragão enquanto ele dorme, tentando alcançar seu coração\n"
-                                "\n"
-                                "2. Ir até a joia de ouro e pegar ela";
+                                "1. Ir até a joia de ouro e pegar ela\n"
+                                "2. Atacar diretamente o dragão enquanto ele dorme, tentando alcançar seu coração";
 
 static char *key36Description = "Você ataca o dragão, seu ataque é efetivo e o dragão acorda assustado, você tão assustado quanto ele, acaba por tropeçar em varias moedas, o dragão solta uma baforada de fogo em você,\n"
                                 "Seu equipamento acaba por não resistir e você acaba sendo queimado e não resiste. Você morreu.";
