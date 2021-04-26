@@ -107,18 +107,7 @@ int main() {
         rpgGame->currentTree = rpgGame->chapter1;
         game_manager(rpgGame->currentTree, rpgGame, player);
     } else if (menuChoice == 2) {
-//		int key;
-//        load(player, &key, 1);
-
-        //treeKey = 'tree2'
-        //nodeKey = 12
-
-
-        //        if(treeKey == tree2){
-        //            rpgGame->currentTree = rpgGame->secondChapter
-//        }
-
-//		game_manager(rpgGame->currentTree, rpgGame);
+        load(rpgGame->currentTree, rpgGame, player, 1);
     }
 
 

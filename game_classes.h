@@ -12,7 +12,7 @@ typedef struct Node {
     struct Node *left, *right;
     struct Challenge *challenge;
     char *nextNodeAsciiArt;
-};
+} Node;
 
 typedef struct Challenge {
     char *description;
@@ -48,5 +48,7 @@ struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, 
 struct Node *newChallenge(char *description, int rightAnswer);
 
 struct Player *newPlayer(int score, char *name);
+
+struct Node *searchNode(struct Node *n, int key);
 
 #endif //BINARY_TREE_RPG_GAME_CLASSES_H

@@ -48,3 +48,17 @@ struct Player *newPlayer(int score, char *name) {
     player->name = name;
     player->score = score;
 }
+
+struct Node *searchNode(struct Node *n, int key) {
+        if(n == NULL)
+                return NULL;
+        else if (n->key == key)
+                return n;
+
+                else {
+                        Node *a = searchNode(n->left, key);
+                        if (a == NULL)
+                                a = searchNode(n->right, key);
+                        return a;
+                }
+}

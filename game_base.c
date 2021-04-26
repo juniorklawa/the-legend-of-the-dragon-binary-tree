@@ -73,6 +73,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
     if (n->key == 4 || n->key == 5) {
         printf("%s\n", n->description);
         n->left = game->chapter2;
+		game->currentTree = game->chapter2;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -80,6 +81,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
     if (n->key == 9 || n->key == 10) {
         printf("%s\n", n->description);
         n->left = game->chapter3;
+		game->currentTree = game->chapter3;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -92,6 +94,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
             puts("Após isso vocẽ rastreia o ninho e vai em busca de informações");
         }
         n->left = game->chapter4;
+		game->currentTree = game->chapter4;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -104,6 +107,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter5;
+		game->currentTree = game->chapter5;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -116,6 +120,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter6;
+		game->currentTree = game->chapter6;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -129,6 +134,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter7;
+		game->currentTree = game->chapter7;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -141,6 +147,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter8;
+		game->currentTree = game->chapter8;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -193,6 +200,7 @@ void deathManager(struct Node *n, struct Player *player) {
 
 void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
+	autoSave(n, game, player);
     int choice;
     if (n != NULL) {
         if (n->left == NULL && n->right==NULL) {
@@ -217,7 +225,7 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
 }
 
-int save(Player *p, int key, int l) {
+int save(struct Node *n, struct RPGGame *game, Player *p, int l) {
     int save_n;
     char file_name[50];
     if (l != 0) {
@@ -257,19 +265,20 @@ int save(Player *p, int key, int l) {
     }
 
     fprintf(arquivo, "%s\n", p->name);
-//    fprintf(arquivo, "%d\n", p->health);
     fprintf(arquivo, "%d\n", p->score);
-//    fprintf(arquivo, "%d\n", p->class);
-    fprintf(arquivo, "%d\n", key);
+	fprintf(arquivo, "%d\n", game->currentTree->key);
+    fprintf(arquivo, "%d\n", n->key);
 
-    printf("\nJOGO SALVO!!!\n");
+    //printf("\nJOGO SALVO!!!\n");
     fclose(arquivo);
 
     return 0;
 
 }
 
-FILE *load(Player *p, int *key, int l) {
+
+
+FILE *load(struct Node *n, struct RPGGame *game, Player *p, int l) {
     int load_n;
     char file_name[50];
     if (l != 0) {
@@ -307,7 +316,7 @@ FILE *load(Player *p, int *key, int l) {
 
     FILE *arquivo = fopen(file_name, "r");
 
-    int aux;
+    int aux, key;
     char line[256], name[50];
 
     if (arquivo == NULL) {
@@ -319,31 +328,54 @@ FILE *load(Player *p, int *key, int l) {
         p->name = name;
         fgets(line, 256, arquivo);
         sscanf(line, "%d ", &aux);
-//        p->health = aux;
-        fgets(line, 256, arquivo);
-        sscanf(line, "%d ", &aux);
         p->score = aux;
         fgets(line, 256, arquivo);
-        sscanf(line, "%d ", &aux);
-//        p->class = aux;
+        sscanf(line, "%d ", &key);
         fgets(line, 256, arquivo);
         sscanf(line, "%d ", &aux);
-        *key = aux;
         printf("SAVE CARREGADO!!\n\n\n");
         fclose(arquivo);
+		switch(key){
+			case 1:
+				game->currentTree = game->chapter1;
+				break;				
+			case 6:
+				game->currentTree = game->chapter2;
+				break;				
+			case 11:
+				game->currentTree = game->chapter3;
+				break;			
+			case 17:
+				game->currentTree = game->chapter4;
+				break;				
+			case 22:
+				game->currentTree = game->chapter5;
+				break;				
+			case 29:
+				game->currentTree = game->chapter6;
+				break;				
+			case 33:
+				game->currentTree = game->chapter7;
+				break;				
+			case 40:
+				game->currentTree = game->chapter8;
+				break;
+			default:
+				exit(1);
+		}
+		n = searchNode(game->currentTree, aux);
+		game_manager(n, game, p);
         return arquivo;
     }
 
 }
 
-void autoSave(Player *p, int key) {
-    save(p, key, 0);
+void autoSave(struct Node *n, struct RPGGame *game, Player *p) {
+    save(n, game, p, 0);
 }
 
-void loadautoSave(Player *p, int *key) {
-    int aux;
-    load(p, &aux, 0);
-    *key = aux;
+void loadautoSave(struct Node *n, struct RPGGame *game, Player *p) {
+    load(n, game, p, 0);
 }
 
 void newName(Player *p) {
