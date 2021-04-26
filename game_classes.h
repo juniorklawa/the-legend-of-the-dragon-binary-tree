@@ -22,10 +22,8 @@ typedef struct Challenge {
 
 
 typedef struct Player {
-    int health;
     int score;
     char *name;
-    int class;
 } Player;
 
 typedef struct RPGGame {
@@ -48,10 +46,8 @@ struct Node *newNode(int k, char *description);
 
 struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, struct Challenge *challenge);
 
-struct Node *newNodeChallenge(int k, char *description, struct Challenge *challenge);
-
 struct Node *newChallenge(char *description, int rightAnswer);
 
-struct Player *newPlayer(int health, int score, char *name, int class);
+struct Player *newPlayer(int score, char *name);
 
 #endif //BINARY_TREE_RPG_GAME_CLASSES_H

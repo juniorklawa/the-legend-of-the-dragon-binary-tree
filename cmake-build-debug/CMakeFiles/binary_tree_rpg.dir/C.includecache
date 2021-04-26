@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c
-
 /home/everaldo/Projects/binary_tree_rpg/game_base.c
 game_classes.h
 /home/everaldo/Projects/binary_tree_rpg/game_classes.h
@@ -21,24 +19,12 @@ string.h
 -
 
 /home/everaldo/Projects/binary_tree_rpg/game_base.h
-
-/home/everaldo/Projects/binary_tree_rpg/game_challenges.c
-
-/home/everaldo/Projects/binary_tree_rpg/game_classes.h
-
-/home/everaldo/Projects/binary_tree_rpg/game_story.c
-
-/home/everaldo/Projects/binary_tree_rpg/main.c
-stdio.h
--
-game_base.h
-/home/everaldo/Projects/binary_tree_rpg/game_base.h
 game_classes.h
 /home/everaldo/Projects/binary_tree_rpg/game_classes.h
-game_story.c
-/home/everaldo/Projects/binary_tree_rpg/game_story.c
-game_challenges.c
-/home/everaldo/Projects/binary_tree_rpg/game_challenges.c
-game_ascii_arts.c
-/home/everaldo/Projects/binary_tree_rpg/game_ascii_arts.c
+stdio.h
+-
+stdlib.h
+-
+
+/home/everaldo/Projects/binary_tree_rpg/game_classes.h
 

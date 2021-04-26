@@ -25,15 +25,6 @@ struct Node *newNode(int k, char *description) {
 }
 
 
-struct Node *newNodeChallenge(int k, char *description, struct Challenge *challenge) {
-    struct Node *node = (struct Node *) malloc(sizeof(struct Node));
-    node->key = k;
-    node->description = description;
-    node->right = node->left = NULL;
-    node->challenge = challenge;
-    return node;
-}
-
 struct Node *newChallenge(char *description, int rightAnswer) {
     struct Challenge *challenge = (struct Challenge *) malloc(sizeof(struct Challenge));
     challenge->description = description;
@@ -53,10 +44,8 @@ struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, 
     return node;
 }
 
-struct Player *newPlayer(int health, int score, char *name, int class) {
+struct Player *newPlayer(int score, char *name) {
     struct Player *player = (struct Player *) malloc(sizeof(struct Player));
     player->name = name;
-    player->class = 0;
-    player->health = 100;
-    player->score = 0;
+    player->score = score;
 }
