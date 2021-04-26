@@ -37,7 +37,6 @@ struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, 
     struct Node *node = (struct Node *) malloc(sizeof(struct Node));
     node->key = k;
     node->description = description;
-    node->isEndOfChapter = 1;
     node->nextNodeAsciiArt = nextAsciiCode;
     node->right = node->left = NULL;
     node->challenge = challenge;
