@@ -215,7 +215,7 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
     int choice;
     if (n != NULL) {
-        if (n->isEndOfChapter == 1) {
+        if (n->left == NULL && n->right==NULL) {
             endOfChapterManager(n, game, player);
         }
 

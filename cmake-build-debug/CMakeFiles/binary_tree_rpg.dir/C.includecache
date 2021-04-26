@@ -26,5 +26,17 @@ stdio.h
 stdlib.h
 -
 
+/home/everaldo/Projects/binary_tree_rpg/game_challenges.c
+
+/home/everaldo/Projects/binary_tree_rpg/game_classes.c
+game_classes.h
 /home/everaldo/Projects/binary_tree_rpg/game_classes.h
+stdio.h
+-
+stdlib.h
+-
+
+/home/everaldo/Projects/binary_tree_rpg/game_classes.h
+
+/home/everaldo/Projects/binary_tree_rpg/game_story.c
 
