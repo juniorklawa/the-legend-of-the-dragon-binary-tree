@@ -98,8 +98,8 @@ int main() {
 
     int menuChoice = 0;
     printf("Você deseja, começar um novo jogo ou carregar um save? \n\n 1. Novo jogo \n 2. Carregar \n");
-
-    scanf("\n\n%d", &menuChoice);
+    printf("Digite sua escolha: ");
+    scanf("%d", &menuChoice);
 
 
     if (menuChoice == 1) {

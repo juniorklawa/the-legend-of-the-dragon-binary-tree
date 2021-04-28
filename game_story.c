@@ -1,7 +1,5 @@
-static char *key1Description = "Você acorda dentro de uma prisão, sem se lembrar muito como foi parar lá, enquanto você tenta se lembrar como foi parar preso um guarda aparece na porta e diz:\n"
-                               "\n"
+static char *key1Description = "\nVocê acorda dentro de uma prisão, sem se lembrar muito como foi parar lá, enquanto você tenta se lembrar como foi parar preso um guarda aparece na porta e diz:\n"
                                "- De pé, prisioneiro. Alguém lá fora gosta muito de você e pagou sua fiança, pegue suas coisas e se retire da prisão.\n"
-                               "\n"
                                "\n"
                                "1. Pegar suas coisas e sair\n"
                                "2. Atacar o guarda";
@@ -25,24 +23,16 @@ static char *key5Description = "Você ignora o homem e continua a beber";
 static char *key6Description = "O homem se aproxima da mesa, sem falar nada e deixa uma carta e sai.\n"
                                "\n"
                                "Após achar tudo isso muito estranho, você espera o homem sair do local e abre a carta:\n"
-                               "\n"
                                "A carta diz:\n"
-                               "\n"
                                "'Siga para o Sul, encontra a caverna secreta, mate o Dragão e recupere meu tesouro, você é o unico capaz de fazer isso!'\n"
-                               "\n"
                                "Você fecha a carta e:\n"
                                "\n"
-                               "\n"
                                "1. Vai até o dono da Taverna perguntar se ele sabem quem era o homem misterioso.\n"
-                               "\n"
                                "2. Sai com pressa ta taberna para chegar o mais rapido possivel no lugar que o mapa indica";
 
 static char *key7Description = "Você pergunta para o dono da Taverna quem era aquele homem e ele te responde:\n"
-                               "\n"
                                "- Ele me pediu para não revelar sua identidade, mas me disse que você deveria escolher um desses dois equipamentos.\n"
-                               "\n"
                                "O Taberneiro te leva para a parte de trás do local e te mostra equipamentos de um guerreiro e equipamentos de um mago e um cavalo, o que você escolhe?\n"
-                               "\n"
                                "\n"
                                "1. Guerreiro\n"
                                "2. Mago";
@@ -76,7 +66,6 @@ static char *key15Description = "Você contorna o grupo de monstros, nenhum dele
                                 "você decide rastrear o ninho para descobrir novas informações.";
 
 static char *key16Description = "Você decide realizar um ataque surpresa ao grupo de globins, são 4 globins pequenos e 1 hobglobins.\n"
-                                "\n"
                                 ;
 
 
@@ -94,8 +83,7 @@ static char *key18Description = "Você pergunta sobre informações do sul, desc
                                 "até então ninguém havia explorado e descoberto o motivo, porem monstros habitavam todos os cantos ao Sul.\n"
                                 "\n"
                                 "Após uma grande caminhada você encontra um salão com varias peças em ouro, contradizendo a natureza primitiva dos globins, \n"
-                                "em um trono improvisado se sentava um globin grande com uma coroa, ele com sua natureza hostil te assusta e você decide aproveitar a chance enfrentar o Goblin Rei.\n"
-                                "\n";
+                                "em um trono improvisado se sentava um globin grande com uma coroa, ele com sua natureza hostil te assusta e você decide aproveitar a chance enfrentar o Goblin Rei.\n";
 
 static char *key19Description = "Você entra na bifurcação a direita, a entrada é mais ampla e sua tocha mal é capaz de iluminar o ambiente, \n"
                                 "um grande salão se abre a sua frente, você levanta sua tocha para iluminar mais a fundo e revela varios pequenos globins assustados, \n"
@@ -115,7 +103,6 @@ static char *key22Description = "Após derrotar o rei goblin, você encontra uns
 
 static char *key23Description = "Você abre a porta, ela desliza suavamente contradizendo seu enorme tamanho, uma espécie de corredor cobertos de livros se abre a sua frente. \n"
                                 "Uma mesa com um livro imponente no canto atrai atenção, você pega o livro, agora resta uma duvida:\n"
-                                "\n"
                                 "\n"
                                 "1. Seguir o corredor correndo o risco de ficar encurralado em um espaço estreito\n"
                                 "\n"
@@ -137,7 +124,7 @@ static char *key27Description = "Você decide enfrentar o grupo de frente, derro
 
 static char *key28Description = "Você se esconde atrás do trono, o grupo de goblins entra, se assusta com a situação, não se aproximam do trono por medo e respeito, pegam o corpo do seu rei e levam para a câmara interna, o caminho se abre e você consegue fugir apenas matando dois goblins furtivamente, você estava na floresta novamente.";
 
-static char *key29Description = "Após bravamente derrotar os Goblins, você olha para os lados e vê apenas arvores, o documento que você achou no corpo do Rei goblin parece ter um mapa e informações sobre um inimigo \"supremo\", os monstros o chamam de A Grande chama, parece que sua caverna fica embaixo de uma cachoeira no sul, dizem que seu corpo é integralmente de chamas e ele mora ali para evitar botar fogo na floresta com seu calor.\n"
+static char *key29Description = "\nApós bravamente derrotar os Goblins, você olha para os lados e vê apenas arvores, o documento que você achou no corpo do Rei goblin parece ter um mapa e informações sobre um inimigo \"supremo\", os monstros o chamam de A Grande chama, parece que sua caverna fica embaixo de uma cachoeira no sul, dizem que seu corpo é integralmente de chamas e ele mora ali para evitar botar fogo na floresta com seu calor.\n"
                                 "Você caminha em direção ao sul e encontra um baú trancado.\n"
                                 "\n"
                                 "1. Abrir\n"
@@ -148,7 +135,6 @@ static char *key30Description = "Você abre o baú, na verdade ele era um mimico
 static char *key31Description = "Você ignora o bau e segue seu mapa em direção ao sul, é relativamente simples o trajeto, basta seguir o rio acima, e quando achassem a cachoeira achariam a caverna.";
 
 static char *key33Description = "Você encontra a cachoeira, um grande lago se abre a sua frente com uma cachoeira inimaginavelmente grande, eram varias quedas que alagavam uma imensa piscina, você precisa pensar em como enfrentar o temível monstro..\n"
-                                "\n"
                                 "\n"
                                 "1. Você entra na caverna cautelosamente, largou a ideia de molhar suas roupas para manter sua velocidade alta e mobilidade para enfrentar ele.\n"
                                 "2. Você decide mergulhar no lago para molhar suas roupas e equipamentos para tornar elas mais resistente a fogo\n";
@@ -178,9 +164,7 @@ static char *key37Description = "Você vai até a joia, observa ela com total si
 static char *key38Description = "Você vai até a joia, observa ela com total silencio, você toca nela.\n"
                                 "Quando você toca na joia o dragão acorda furioso por alguem ter tocado em seu tesouro, você em um ato de susto, resolve correr em direção a saída, seu equipamento molhado te atrapalha, você acaba por tropeçar e recebe uma patada do dragão, seu equipamento não resiste e você morre.";
 
-static char *key39Description = "Você ataca o dragão, seu ataque é efetivo e o dragão acorda assustado, você tão assustado quanto ele, acaba por tropeçar em varias moedas, o dragão solta uma baforada de fogo em você, você acha que ia morrer, porem seu equipamento encharcado acaba por lhe prover uma resistência. Você se levanta e se prepara pra luta.\n"
-                                "\n"
-                                "(Grande Desafio)";
+static char *key39Description = "Você ataca o dragão, seu ataque é efetivo e o dragão acorda assustado, você tão assustado quanto ele, acaba por tropeçar em varias moedas, o dragão solta uma baforada de fogo em você, você acha que ia morrer, porem seu equipamento encharcado acaba por lhe prover uma resistência. Você se levanta e se prepara pra luta.\n";
 
 static char *key40Description = "Você volta a caverna, coleta o que você consegue de ouro e a joia.\n"
                                 "Você se sente tentado com todo aquele ouro e se lembra da carta \"Devolva meu tesouro\"\n"

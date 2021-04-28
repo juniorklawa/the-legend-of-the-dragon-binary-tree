@@ -46,7 +46,7 @@ void chapterWithChallengeManager(struct Node *n, struct Player *player) {
              "┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼\n"
              "┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n"
              "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
-        printf("\nSeu score final foi: %d.", player->score);
+        printf("\nSeu score final foi: %d", player->score);
         exit(0);
     }
 }
@@ -57,7 +57,7 @@ void endOfGameManager(struct Player *player){
     puts("Caio Henrique Marques Meira");
     puts("Everaldo Rosa de Souza Junior");
     puts("Heitor Derber Trevisol");
-    printf("\nSeu score final foi: %d.", player->score);
+    printf("\nSeu score final foi: %d", player->score);
     exit(0);
 }
 
@@ -193,7 +193,7 @@ void deathManager(struct Node *n, struct Player *player) {
              "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼"
         );
 
-        printf("\nSeu score final foi: %d.", player->score);
+        printf("\nSeu score final foi: %d", player->score);
         exit(0);
     }
 }
@@ -310,6 +310,7 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
 
 void newName(Player *p) {
     char temp[50];
+    printf("Digite seu nome: ");
     scanf("\n\n%s", temp);
     p->name = temp;
 }
