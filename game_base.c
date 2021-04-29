@@ -4,21 +4,25 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Essa função é resposável por cuidar de um nó quando ele tem um desafio
 void chapterWithChallengeManager(struct Node *n, struct Player *player) {
     puts("D E S A F I O");
+    // Exibe a pergunta no terminal
     printf("%s\n", n->challenge->description);
     int choice = 0;
     printf("Digite sua resposta: ");
     scanf("%d", &choice);
     printf("\n");
 
-
+    // Verifica se a resposta do usuario é igual a resposta do desafio
     if (choice == n->challenge->rightAnswer) {
 
         player->score += 25;
         puts("Você passou pelo desafio! \n");
+        // Se sim aumenta o score do player e retorna.
         return;
     } else {
+        // Se não o jogo acaba
         puts("Você falhou no desafio.");
         puts("\n"
              "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
@@ -50,7 +54,7 @@ void chapterWithChallengeManager(struct Node *n, struct Player *player) {
         exit(0);
     }
 }
-
+// Função responsável por exibir os créditos e o score caso o usuário chegue ao final do jogo
 void endOfGameManager(struct Player *player){
     puts("Obrigado por jogar!\n");
     puts("Desenvolvido e roteirizado por:\n");
@@ -61,19 +65,23 @@ void endOfGameManager(struct Player *player){
     exit(0);
 }
 
-
+// Função responsavel por lidar com nós que são folha de uma árvore e por "enxertar" uma árvore na outra"
 void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
+    // 41 e 42 são chaves dos últimos nós do último capítulo, por isso são tratados de forma diferente
     if(n->key == 41 || n->key == 42) {
         printf("%s\n", n->description);
         puts(n->nextNodeAsciiArt);
         endOfGameManager(player);
     }
-
+    // Aqui verificamos as chaves do nó
     if (n->key == 4 || n->key == 5) {
+        // Aqui printamos o conteúdo do nó
         printf("%s\n", n->description);
+        // Aqui acontece o "enxerto" de uma árvore na outra, como conveção, todo "enxerto" é feito do lado esquerdo
         n->left = game->chapter2;
 		game->currentTree = game->chapter2;
+		// Aqui mostramos uma ascii art que tem relação com o capitulo posterior
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -86,14 +94,17 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         game_manager(n->left, game, player);
     }
 
+    // Esse é um caso de um nó que tem desafio
     if (n->key == 12 || n->key == 15 || n->key == 16) {
         printf("%s\n", n->description);
 
+        // Se o nó tiver desafio então chamaos a função de desafio e se for necessário printamos a história de "sucesso" do jogador
         if (n->challenge != NULL) {
             chapterWithChallengeManager(n, player);
             puts("Após isso vocẽ rastreia o ninho e vai em busca de informações");
         }
         n->left = game->chapter4;
+        // Após o desafio o enxerto ocorre normalmente
 		game->currentTree = game->chapter4;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
@@ -160,9 +171,10 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
     }
 }
 
-
+// Essa é a função que cuida do Game Over
 void deathManager(struct Node *n, struct Player *player) {
 
+    // Alguns nós não tem desafio, e são considerados "falhas críticas" que fazem o jogador perder na hora
     if (n->key == 3 || n->key == 8 || n->key == 36 || n->key == 38) {
         printf("%s\n", n->description);
         puts("\n"
@@ -198,22 +210,27 @@ void deathManager(struct Node *n, struct Player *player) {
     }
 }
 
+// Essa é a função que toma conta do jogo todo, checa se é fim de capítulo, faz a recursão e etc.
 void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
 	save(n, game, player);
     int choice;
     if (n != NULL) {
+        // Aqui vemos se o nó atual é folha, se sim, chamamos a função que cuida de nós que são folha (fim de capítulo)
         if (n->left == NULL && n->right==NULL) {
             endOfChapterManager(n, game, player);
         }
 
+        // Função responsável por saber se o nó atual é um nó de "falha crítica"
         deathManager(n, player);
+
 
         printf("%s\n", n->description);
 
         printf("Digite sua escolha: ");
         scanf("%d", &choice);
         printf("\n");
+        // Cada nó passado recebe +5 no score
         player->score += 5;
         if (choice == 1) {
             game_manager(n->left, game, player);
@@ -307,7 +324,7 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
     }
 
 }
-
+// Função responsável por atribuir o nome do jogador a Struct do Player
 void newName(Player *p) {
     char temp[50];
     printf("Digite seu nome: ");

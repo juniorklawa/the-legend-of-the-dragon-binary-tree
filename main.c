@@ -8,6 +8,8 @@
 
 int main() {
 
+    // Aqui criamos todas os desafios
+
     struct Challenge *challenge1 = newChallenge(challengeDescription1, 2);
 
     struct Challenge *challenge2 = newChallenge(challengeDescription2, 2);
@@ -21,6 +23,8 @@ int main() {
     struct Challenge *challenge6 = newChallenge(challengeDescription6, 1);
 
     struct Challenge *challenge7 = newChallenge(challengeDescription7, 1);
+
+    // Aqui montamos todas as arvores com seus respectivos desafio, chaves e historias
 
     //CHAPTER 1
     struct Node *chapter1 = newNode(1, key1Description);
@@ -95,6 +99,7 @@ int main() {
          "  ███    █▀       █████▄▄██   ██████████  ▀█   █▀  ████████▀    ███    █▀       ████████▀   ▀██████▀       ████████▀    ███    ███   ███    █▀    ████████▀    ███    █▀   ▀██████▀  \n"
          "                  ▀                                                                                                     ███    ███                                                   ");
 
+    // Meny
 
     int menuChoice = 0;
     printf("Você deseja, começar um novo jogo ou carregar um save? \n\n 1. Novo jogo \n 2. Carregar \n");

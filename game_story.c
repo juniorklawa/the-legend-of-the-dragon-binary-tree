@@ -1,3 +1,10 @@
+/*
+ *
+ * Aqui ficam todas as frases de cada nó do jogo
+ *
+ * */
+
+// ARVORE 2
 static char *key1Description = "\nVocê acorda dentro de uma prisão, sem se lembrar muito como foi parar lá, enquanto você tenta se lembrar como foi parar preso um guarda aparece na porta e diz:\n"
                                "- De pé, prisioneiro. Alguém lá fora gosta muito de você e pagou sua fiança, pegue suas coisas e se retire da prisão.\n"
                                "\n"
