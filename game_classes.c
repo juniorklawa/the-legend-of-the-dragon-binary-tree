@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ *
+ * Aqui isolamos todas as criações de structs
+ *
+ * */
+
+
 struct RPGGame *newRPGGame(struct Node *chapter1, struct Node *chapter2, struct Node *chapter3, struct Node *chapter4,
                            struct Node *chapter5, struct Node *chapter6, struct Node *chapter7, struct Node *chapter8) {
     struct RPGGame *RPGGame = (struct RPGGame *) malloc(sizeof(struct RPGGame));

@@ -1,3 +1,10 @@
+/*
+ *
+ * Aqui ficam todas as ASCII ARTS que são exibidas ao final de cada capítulo (árvore)
+ *
+ * */
+
+
 static char *firstChapterAscii =  "   _______________________-------------------                       `\\\n"
                                   " /:--__                                                              |\n"
                                   "||< > |                                   ___________________________/\n"
