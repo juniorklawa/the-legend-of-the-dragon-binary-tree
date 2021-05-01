@@ -324,6 +324,21 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
     }
 
 }
+
+struct Node *searchNode(struct Node *n, int key) {
+        if(n == NULL)
+                return NULL;
+        else if (n->key == key)
+                return n;
+
+                else {
+                        Node *a = searchNode(n->left, key);
+                        if (a == NULL)
+                                a = searchNode(n->right, key);
+                        return a;
+                }
+}
+
 // Função responsável por atribuir o nome do jogador a Struct do Player
 void newName(Player *p) {
     char temp[50];

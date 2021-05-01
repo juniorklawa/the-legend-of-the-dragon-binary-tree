@@ -11,5 +11,6 @@ void deathManager(struct Node *n, struct Player *player);
 void endOfGameManager(struct Player *player);
 int save(struct Node *n, struct RPGGame *game, Player *p);
 FILE *load(struct Node *n, struct RPGGame *game, Player *p);
+struct Node *searchNode(struct Node *n, int key);
 void newName(Player *p);
 #endif //BINARY_TREE_RPG_GAME_BASE_H
