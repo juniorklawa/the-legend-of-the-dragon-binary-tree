@@ -242,11 +242,15 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
 }
 
+// Função encarregada de salvar o jogo automaticamente a cada nó passado no jogo
 int save(struct Node *n, struct RPGGame *game, Player *p) {
     char file_name[50];
     strcpy(file_name, "autosave.txt");
-
+	
+	// Abre o arquivo ou cria um novo para escrever os atributos a serem salvados
     FILE *arquivo = fopen(file_name, "w");
+	
+	// Teste de segurança caso ocorra um erro na abertura do arquivo
     if (arquivo == NULL) {
         printf("Arquivo não enontrado\n\n");
         return 0;
@@ -263,8 +267,7 @@ int save(struct Node *n, struct RPGGame *game, Player *p) {
 
 }
 
-
-
+// Função encarregada de carregar o jogo caso o usuário deseje no menu inicial do jogo
 FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
     char file_name[50];
     strcpy(file_name, "autosave.txt");
@@ -273,7 +276,7 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
 
     int aux, key;
     char line[256], name[50];
-
+	// Teste de segurança caso o arquivo não seja encontrado
     if (arquivo == NULL) {
         printf("Arquivo não encontrado \n\n");
         return NULL;
@@ -290,6 +293,9 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
         sscanf(line, "%d ", &aux);
         printf("SAVE CARREGADO!!\n\n\n");
         fclose(arquivo);
+		
+		// Switch utilizado para definir o capítulo em que o jogo foi salvado
+		
 		switch(key){
 			case 1:
 				game->currentTree = game->chapter1;
@@ -325,6 +331,7 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
 
 }
 
+// Função que percorre a árvore do cápitulo e procura o nó desejado
 struct Node *searchNode(struct Node *n, int key) {
         if(n == NULL)
                 return NULL;
