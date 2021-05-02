@@ -99,7 +99,7 @@ int main() {
          "  ███    █▀       █████▄▄██   ██████████  ▀█   █▀  ████████▀    ███    █▀       ████████▀   ▀██████▀       ████████▀    ███    ███   ███    █▀    ████████▀    ███    █▀   ▀██████▀  \n"
          "                  ▀                                                                                                     ███    ███                                                   ");
 
-    // Meny
+    // Menu
 
     int menuChoice = 0;
     printf("Você deseja, começar um novo jogo ou carregar um save? \n\n 1. Novo jogo \n 2. Carregar \n");

@@ -14,48 +14,57 @@ void chapterWithChallengeManager(struct Node *n, struct Player *player) {
     scanf("%d", &choice);
     printf("\n");
 
-    // Verifica se a resposta do usuario é igual a resposta do desafio
-    if (choice == n->challenge->rightAnswer) {
 
-        player->score += 25;
-        puts("Você passou pelo desafio! \n");
-        // Se sim aumenta o score do player e retorna.
-        return;
+    if (choice == 1 || choice == 2) {
+        // Verifica se a resposta do usuario é igual a resposta do desafio
+        if (choice == n->challenge->rightAnswer) {
+
+            player->score += 25;
+            puts("Você passou pelo desafio! \n");
+            // Se sim aumenta o score do player e retorna.
+            return;
+        } else {
+            // Se não o jogo acaba
+            puts("Você falhou no desafio.");
+            puts("\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀\n"
+                 "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼\n"
+                 "██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀\n"
+                 "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼\n"
+                 "███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼\n"
+                 "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+                 "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼\n"
+                 "██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+                 "███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n"
+                 "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
+            printf("\nSeu score final foi: %d", player->score);
+            exit(0);
+        }
     } else {
-        // Se não o jogo acaba
-        puts("Você falhou no desafio.");
-        puts("\n"
-             "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀\n"
-             "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼\n"
-             "██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀\n"
-             "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼\n"
-             "███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄\n"
-             "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼\n"
-             "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
-             "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼\n"
-             "██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
-             "███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄\n"
-             "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n"
-             "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
-        printf("\nSeu score final foi: %d", player->score);
-        exit(0);
+        puts("ATENÇÃO, AS UNICAS ENTRADAS POSSIVEIS SÃO 1 E 2");
+        chapterWithChallengeManager(n, player);
     }
+
+
 }
+
 // Função responsável por exibir os créditos e o score caso o usuário chegue ao final do jogo
-void endOfGameManager(struct Player *player){
+void endOfGameManager(struct Player *player) {
     puts("Obrigado por jogar!\n");
     puts("Desenvolvido e roteirizado por:\n");
     puts("Caio Henrique Marques Meira");
@@ -69,7 +78,7 @@ void endOfGameManager(struct Player *player){
 void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
     // 41 e 42 são chaves dos últimos nós do último capítulo, por isso são tratados de forma diferente
-    if(n->key == 41 || n->key == 42) {
+    if (n->key == 41 || n->key == 42) {
         printf("%s\n", n->description);
         puts(n->nextNodeAsciiArt);
         endOfGameManager(player);
@@ -80,8 +89,8 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         printf("%s\n", n->description);
         // Aqui acontece o "enxerto" de uma árvore na outra, como conveção, todo "enxerto" é feito do lado esquerdo
         n->left = game->chapter2;
-		game->currentTree = game->chapter2;
-		// Aqui mostramos uma ascii art que tem relação com o capitulo posterior
+        game->currentTree = game->chapter2;
+        // Aqui mostramos uma ascii art que tem relação com o capitulo posterior
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -89,7 +98,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
     if (n->key == 9 || n->key == 10) {
         printf("%s\n", n->description);
         n->left = game->chapter3;
-		game->currentTree = game->chapter3;
+        game->currentTree = game->chapter3;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -105,7 +114,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
         n->left = game->chapter4;
         // Após o desafio o enxerto ocorre normalmente
-		game->currentTree = game->chapter4;
+        game->currentTree = game->chapter4;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -118,7 +127,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter5;
-		game->currentTree = game->chapter5;
+        game->currentTree = game->chapter5;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -131,7 +140,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter6;
-		game->currentTree = game->chapter6;
+        game->currentTree = game->chapter6;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -145,7 +154,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter7;
-		game->currentTree = game->chapter7;
+        game->currentTree = game->chapter7;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -158,7 +167,7 @@ void endOfChapterManager(struct Node *n, struct RPGGame *game, struct Player *pl
         }
 
         n->left = game->chapter8;
-		game->currentTree = game->chapter8;
+        game->currentTree = game->chapter8;
         puts(n->nextNodeAsciiArt);
         game_manager(n->left, game, player);
     }
@@ -213,11 +222,11 @@ void deathManager(struct Node *n, struct Player *player) {
 // Essa é a função que toma conta do jogo todo, checa se é fim de capítulo, faz a recursão e etc.
 void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 
-	save(n, game, player);
+    save(n, game, player);
     int choice;
     if (n != NULL) {
         // Aqui vemos se o nó atual é folha, se sim, chamamos a função que cuida de nós que são folha (fim de capítulo)
-        if (n->left == NULL && n->right==NULL) {
+        if (n->left == NULL && n->right == NULL) {
             endOfChapterManager(n, game, player);
         }
 
@@ -234,8 +243,11 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
         player->score += 5;
         if (choice == 1) {
             game_manager(n->left, game, player);
-        } else {
+        } else if (choice == 2) {
             game_manager(n->right, game, player);
+        } else {
+            puts("ATENÇÃO, AS UNICAS ENTRADAS POSSIVEIS SÃO 1 E 2");
+            game_manager(n, game, player);
         }
 
     }
@@ -246,11 +258,11 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
 int save(struct Node *n, struct RPGGame *game, Player *p) {
     char file_name[50];
     strcpy(file_name, "autosave.txt");
-	
-	// Abre o arquivo ou cria um novo para escrever os atributos a serem salvados
+
+    // Abre o arquivo ou cria um novo para escrever os atributos a serem salvados
     FILE *arquivo = fopen(file_name, "w");
-	
-	// Teste de segurança caso ocorra um erro na abertura do arquivo
+
+    // Teste de segurança caso ocorra um erro na abertura do arquivo
     if (arquivo == NULL) {
         printf("Arquivo não enontrado\n\n");
         return 0;
@@ -258,7 +270,7 @@ int save(struct Node *n, struct RPGGame *game, Player *p) {
 
     fprintf(arquivo, "%s\n", p->name);
     fprintf(arquivo, "%d\n", p->score);
-	fprintf(arquivo, "%d\n", game->currentTree->key);
+    fprintf(arquivo, "%d\n", game->currentTree->key);
     fprintf(arquivo, "%d\n", n->key);
 
     fclose(arquivo);
@@ -276,7 +288,7 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
 
     int aux, key;
     char line[256], name[50];
-	// Teste de segurança caso o arquivo não seja encontrado
+    // Teste de segurança caso o arquivo não seja encontrado
     if (arquivo == NULL) {
         printf("Arquivo não encontrado \n\n");
         return NULL;
@@ -293,39 +305,39 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
         sscanf(line, "%d ", &aux);
         printf("SAVE CARREGADO!!\n\n\n");
         fclose(arquivo);
-		
-		// Switch utilizado para definir o capítulo em que o jogo foi salvado
-		
-		switch(key){
-			case 1:
-				game->currentTree = game->chapter1;
-				break;				
-			case 6:
-				game->currentTree = game->chapter2;
-				break;				
-			case 11:
-				game->currentTree = game->chapter3;
-				break;			
-			case 17:
-				game->currentTree = game->chapter4;
-				break;				
-			case 22:
-				game->currentTree = game->chapter5;
-				break;				
-			case 29:
-				game->currentTree = game->chapter6;
-				break;				
-			case 33:
-				game->currentTree = game->chapter7;
-				break;				
-			case 40:
-				game->currentTree = game->chapter8;
-				break;
-			default:
-				exit(1);
-		}
-		n = searchNode(game->currentTree, aux);
-		game_manager(n, game, p);
+
+        // Switch utilizado para definir o capítulo em que o jogo foi salvado
+
+        switch (key) {
+            case 1:
+                game->currentTree = game->chapter1;
+                break;
+            case 6:
+                game->currentTree = game->chapter2;
+                break;
+            case 11:
+                game->currentTree = game->chapter3;
+                break;
+            case 17:
+                game->currentTree = game->chapter4;
+                break;
+            case 22:
+                game->currentTree = game->chapter5;
+                break;
+            case 29:
+                game->currentTree = game->chapter6;
+                break;
+            case 33:
+                game->currentTree = game->chapter7;
+                break;
+            case 40:
+                game->currentTree = game->chapter8;
+                break;
+            default:
+                exit(1);
+        }
+        n = searchNode(game->currentTree, aux);
+        game_manager(n, game, p);
         return arquivo;
     }
 
@@ -333,17 +345,17 @@ FILE *load(struct Node *n, struct RPGGame *game, Player *p) {
 
 // Função que percorre a árvore do cápitulo e procura o nó desejado
 struct Node *searchNode(struct Node *n, int key) {
-        if(n == NULL)
-                return NULL;
-        else if (n->key == key)
-                return n;
+    if (n == NULL)
+        return NULL;
+    else if (n->key == key)
+        return n;
 
-                else {
-                        Node *a = searchNode(n->left, key);
-                        if (a == NULL)
-                                a = searchNode(n->right, key);
-                        return a;
-                }
+    else {
+        Node *a = searchNode(n->left, key);
+        if (a == NULL)
+            a = searchNode(n->right, key);
+        return a;
+    }
 }
 
 // Função responsável por atribuir o nome do jogador a Struct do Player
