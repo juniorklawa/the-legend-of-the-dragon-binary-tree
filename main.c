@@ -100,7 +100,6 @@ int main() {
          "                  ▀                                                                                                     ███    ███                                                   ");
 
     // Menu
-
     int menuChoice = 0;
     printf("Você deseja, começar um novo jogo ou carregar um save? \n\n 1. Novo jogo \n 2. Carregar \n");
     printf("Digite sua escolha: ");
@@ -113,6 +112,8 @@ int main() {
         game_manager(rpgGame->currentTree, rpgGame, player);
     } else if (menuChoice == 2) {
         load(rpgGame->currentTree, rpgGame, player);
+    } else {
+        puts("ERRO: ENTRADAS POSSIVEIS SÃO 1 E 2, RODE O JOGO NOVAMENTE.");
     }
 
 
