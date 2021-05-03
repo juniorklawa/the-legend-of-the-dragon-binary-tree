@@ -6,15 +6,15 @@
 
 // Função para limpar uma árvore binária
 void free_tree (struct Node *n) {
-        if (n != NULL) {
-                if(n->challenge != NULL)
-                        free(n->challenge);
-				// Teste para não conflitar devido aos "enxertos" na função exitGameManager
-                if(n->isEndOfChapter == 0) {
-                        free_tree (n->left);
-                }
-                free_tree (n->right);
-                free(n);
+	if (n != NULL) {
+		if(n->challenge != NULL)
+			free(n->challenge);
+		// Teste para não conflitar devido aos "enxertos" na função exitGameManager
+		if(n->isEndOfChapter == 0) {
+			free_tree (n->left);
+		}
+		free_tree (n->right);
+		free(n);
    }
 }
 
