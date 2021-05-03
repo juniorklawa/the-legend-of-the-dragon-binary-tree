@@ -10,7 +10,7 @@ void free_tree (struct Node *n) {
                 if(n->challenge != NULL)
                         free(n->challenge);
 				// Teste para não conflitar devido aos "enxertos" na função exitGameManager
-                if(n->key != 4 && n->key != 5 && n->key != 9 && n->key != 10 && n->key != 12 && n->key != 15 && n->key != 16 && n->key != 18 && n->key != 19 && n->key != 25 && n->key != 26 && n->key != 27 && n->key != 28 && n->key != 30 && n->key != 31 && n->key != 37 && n->key != 39 && n->key != 41 && n->key != 42) {
+                if(n->isEndOfChapter == 0) {
                         free_tree (n->left);
                 }
                 free_tree (n->right);
