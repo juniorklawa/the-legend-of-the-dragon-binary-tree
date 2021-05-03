@@ -10,6 +10,7 @@ typedef struct Node {
     int key;
     char *description;
     struct Node *left, *right;
+	int isEndOfChapter;
     struct Challenge *challenge;
     char *nextNodeAsciiArt;
 } Node;

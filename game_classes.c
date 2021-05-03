@@ -28,6 +28,7 @@ struct Node *newNode(int k, char *description) {
     node->key = k;
     node->description = description;
     node->right = node->left = NULL;
+	node->isEndOfChapter = 0;
     return node;
 }
 
@@ -46,6 +47,7 @@ struct Node *newNodeEndOfChapter(int k, char *description, char *nextAsciiCode, 
     node->description = description;
     node->nextNodeAsciiArt = nextAsciiCode;
     node->right = node->left = NULL;
+	node->isEndOfChapter = 1;
     node->challenge = challenge;
     return node;
 }
