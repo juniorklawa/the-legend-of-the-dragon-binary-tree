@@ -252,13 +252,15 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
     save(n, game, player);
     int choice;
     if (n != NULL) {
+
+        // Função responsável por saber se o nó atual é um nó de "falha crítica"
+        deathManager(n, player, game);
+
         // Aqui vemos se o nó atual é folha, se sim, chamamos a função que cuida de nós que são folha (fim de capítulo)
         if (n->left == NULL && n->right == NULL) {
             endOfChapterManager(n, game, player);
         }
 
-        // Função responsável por saber se o nó atual é um nó de "falha crítica"
-        deathManager(n, player, game);
 
 
         printf("%s\n", n->description);
