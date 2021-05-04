@@ -72,8 +72,7 @@ static char *key13Description = "Você sai da taverna, caminha até a guarniçã
 static char *key15Description = "Você contorna o grupo de monstros, nenhum deles nota sua presença, porem você repara que todos os passos dos globins levam a uma direção, \n"
                                 "você decide rastrear o ninho para descobrir novas informações.";
 
-static char *key16Description = "Você decide realizar um ataque surpresa ao grupo de globins, são 4 globins pequenos e 1 hobglobins.\n"
-                                ;
+static char *key16Description = "Você decide realizar um ataque surpresa ao grupo de globins, são 4 globins pequenos e 1 hobglobins.\n";
 
 
 

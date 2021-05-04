@@ -5,30 +5,30 @@
 #include <string.h>
 
 // Função para limpar uma árvore binária
-void free_tree (struct Node *n) {
-	if (n != NULL) {
-		if(n->challenge != NULL)
-			free(n->challenge);
-		// Teste para não conflitar devido aos "enxertos" na função exitGameManager
-		if(n->isEndOfChapter == 0) {
-			free_tree (n->left);
-		}
-		free_tree (n->right);
-		free(n);
-   }
+void free_tree(struct Node *n) {
+    if (n != NULL) {
+        if (n->challenge != NULL)
+            free(n->challenge);
+        // Teste para não conflitar devido aos "enxertos" na função exitGameManager
+        if (n->isEndOfChapter == 0) {
+            free_tree(n->left);
+        }
+        free_tree(n->right);
+        free(n);
+    }
 }
 
 // Função que libera todas árvores do jogo
-void exitGameManager (struct RPGGame *game) {
-	free_tree(game->chapter1);
-	free_tree(game->chapter2);
-	free_tree(game->chapter3);
-	free_tree(game->chapter4);
-	free_tree(game->chapter5);
-	free_tree(game->chapter6);
-	free_tree(game->chapter7);
-	free_tree(game->chapter8);
-	exit(0);
+void exitGameManager(struct RPGGame *game) {
+    free_tree(game->chapter1);
+    free_tree(game->chapter2);
+    free_tree(game->chapter3);
+    free_tree(game->chapter4);
+    free_tree(game->chapter5);
+    free_tree(game->chapter6);
+    free_tree(game->chapter7);
+    free_tree(game->chapter8);
+    exit(0);
 }
 
 // Essa função é resposável por cuidar de um nó quando ele tem um desafio
@@ -80,7 +80,7 @@ void chapterWithChallengeManager(struct Node *n, struct Player *player, struct R
                  "┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n"
                  "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
             printf("\nSeu score final foi: %d\n", player->score);
-			exitGameManager(game);
+            exitGameManager(game);
         }
     } else {
         puts("ATENÇÃO, AS UNICAS ENTRADAS POSSIVEIS SÃO 1 E 2");
@@ -98,7 +98,7 @@ void endOfGameManager(struct RPGGame *game, struct Player *player) {
     puts("Everaldo Rosa de Souza Junior");
     puts("Heitor Derber Trevisol");
     printf("\nSeu score final foi: %d\n", player->score);
-	exitGameManager(game);
+    exitGameManager(game);
 }
 
 // Função responsavel por lidar com nós que são folha de uma árvore e por "enxertar" uma árvore na outra"
@@ -242,7 +242,7 @@ void deathManager(struct Node *n, struct Player *player, struct RPGGame *game) {
         );
 
         printf("\nSeu score final foi: %d\n", player->score);
-		exitGameManager(game);
+        exitGameManager(game);
     }
 }
 
@@ -260,7 +260,6 @@ void game_manager(struct Node *n, struct RPGGame *game, struct Player *player) {
         if (n->left == NULL && n->right == NULL) {
             endOfChapterManager(n, game, player);
         }
-
 
 
         printf("%s\n", n->description);

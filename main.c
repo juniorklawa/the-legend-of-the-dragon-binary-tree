@@ -107,7 +107,7 @@ int main() {
 
 
     if (menuChoice == 1) {
-		newName(player);
+        newName(player);
         rpgGame->currentTree = rpgGame->chapter1;
         game_manager(rpgGame->currentTree, rpgGame, player);
     } else if (menuChoice == 2) {
